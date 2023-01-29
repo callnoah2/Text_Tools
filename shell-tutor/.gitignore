@@ -1,0 +1,5 @@
+shortcuts
+shell-redirection
+.[0-7]*-*.sh
+*.sw[pon]
+*~
