@@ -396,9 +396,8 @@ echo_2_hint() {
 echo_2_epilogue() {
 	cat <<-:
 	Phew!  That was a lot of typing!  And there are still $(bld six more files) to
-	get through, and you don't even what order they must go.  If this is
-	what using the shel is like, you must be wondering why anybody puts up
-	with it!
+	get through.  If this is what using the shell is like, you must be
+	wondering why anybody puts up with it!
 
 	Never fear, things are about to get $(bld much) easier.
 
@@ -625,14 +624,14 @@ ctrl_a_epilogue() {
 		Why does the shell call it $(kbd Meta) when your keyboard calls it
 		$(kbd Option) instead?
 
-		Your keyboard follows the layout Apple established for their
-		personal computers in 1983.  The mainframes that the Unix command
-		shell was created for on weren't made by Apple, nor were they
-		"personal" computers.  The keys surrounding their spacebar were
-		labeled $(kbd Meta) and served a similar purpose to Apple's $(kbd Option) key.
+		Your keyboard follows the layout Apple established for their personal
+		computers in 1983.  The mainframes on which the Unix shell was made
+		predates Apple by over a decade, weren't built by Apple, and were not
+		"personal" computers.  The keys surrounding their space bar were labeled
+		$(kbd Meta) and served a similar purpose to Apple's $(kbd Option) key.
 
-		Apple keyboards have both a $(kbd Control) key and a $(kbd Command) key, and
-		your terminal distinguishes between them.  These shortcuts denoted
+		Apple keyboards have both a $(kbd Control) key and a $(kbd Command) key,
+		and your terminal distinguishes between them.  These shortcuts denoted
 		by $(kbd '^') use $(kbd Control):
 
 		$(cyn Shortcut) | $(cyn Shell Line Editor Action)
@@ -648,9 +647,9 @@ ctrl_a_epilogue() {
 
 		cat <<-:
 
-		Incidentally, the $(kbd Command) shortcuts you learned on the Desktop still
-		work as you expect in the shell.  Specifically, these combos retain
-		their familiar functions in the Terminal app:
+		Incidentally, the $(kbd Command) shortcuts you learned on the Desktop
+		still work as you expect in the shell.  Specifically, these combos
+		retain their familiar functions in the Terminal app:
 
 		$(cyn Shortcut)   | $(cyn Action)
 		-----------|-------
@@ -665,15 +664,15 @@ ctrl_a_epilogue() {
 		Why does the shell call it $(kbd Meta) when your keyboard calls it
 		$(kbd Alt) instead?
 
-		The keyboard you're using now follows the layout IBM established
-		for their Personal Computers in 1981.  The mainframes that the Unix
-		command shell was created for on weren't made by IBM, nor were they
-		"personal" computers.  The keys surrounding their space bar were
-		labeled $(kbd Meta) and served a similar purpose to IBM's $(kbd Alt) key.
+		Your keyboard follows the layout IBM established for their Personal
+		Computers in 1981.  The mainframes on which the Unix shell was made
+		predates the IBM PC by over a decade, weren't created by IBM, and were not
+		"personal" computers.  The keys surrounding their space bar were labeled
+		$(kbd Meta) and served the same purpose as IBM's $(kbd Alt) key.
 
-		Incidentally, the keyboard shortcuts you learned on the Desktop
-		don't work as you would think in the shell.  Specifically, these
-		keystrokes won't do what you expect:
+		Incidentally, the keyboard shortcuts you learned on the Desktop don't
+		work as you would think in the shell.  Specifically, these keystrokes
+		won't do what you expect:
 
 		$(cyn Shortcut) | $(cyn IBM-PC Action) | $(cyn Shell Line Editor Action)
 		---------|---------------|---------------------------------------------
