@@ -480,9 +480,9 @@ append_to_final_md_prologue() {
 	One side effect of redirection is that an existing destination file is
 	deleted and recreated $(bld before) the command that makes the output is run.
 
-	Sometimes you want to $(bld add) more text to end of an existing file.  You
-	could create many files and then cat them all together at the end, but
-	that's still too much work.
+	Sometimes you want to $(bld add) more text to the end of an existing file.
+	You could create many files and then cat them all together at the end,
+	but that's still too much work.
 
 	Luckily, the shell provides a way to add new text onto an existing file.
 	$(cyn '>> FILENAME') $(bld appends) new content to the end of $(path FILENAME).
