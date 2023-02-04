@@ -22,15 +22,83 @@ Deliver:
 **Step One**
 [x]Read through all files
 **Step Two**
-[ ]Do it again
+[x]Do it again
 **Step three**
-[ ]Re-write instructions
+[x]Re-write instructions
+
+In this assignment, I will create the following text tools (Preferably in this order):
+Cat - WC - Grep - Head - Sort - Tac - Tail - Cut - Paste
+User can use all tools by runinng python3 src/tt.py ToolToBeUsed [Options] TheFIle OtherFilesAreOptional
+all tools will be ran through Usage.usage(): to help organize code. This file doesn't need to be changed.
+when testing, I can check what the output should be by checking the examples to make sure I am doing this right.
+	when files are opened, they should be in read only mode. Don't change files
+	User input is from a driver, not an input function. 
+I need to create error messages by mimicing the Unix text tools. Usage.usage() will be used to give consitant error messages
+	Some erros will be detected in the driver,
+	Others will be detected by the tool itself.
+		errors will include: 
+		too few arguments
+		invalid tool selection
+		file does not exist
+		non file object cannot be opened
+		User Does not have permission to view this file
+		too few or incorect arguments given
+
 **Step four**
-[ ]Explain what each function should do
+[x]Explain what each function should do
 	* what input it needs 
 	* what will cause error messages and what the messages will say
 	* any challenges with the function
 	* what I already know how to do
+
+Cat - can take >= 1 files, The cat function will open the files it is given and print them into one output.
+error - file does not exist
+error - User does not have permission to view this file
+error - Too few arguments
+
+WC - can take >= 1 files, output is one line per file giving the user:
+	the number of lines,
+	the number of words,
+	the number of characters.
+	the file the data came from. 
+words will be seperated by space, so even if the word is hello-this-is-one-word, it is counted as one word.
+output must be formatted in a way that each column is seperate
+error - file does not exist
+error - too few arguments given
+these errors do not need to be pre - screened, open will raise an exception
+
+Grep - this function is case sensitive, this function takes an argument, -v, where it finds all lines not containing the argument being searched for.
+errors will be handled with the open() function
+
+Head - This function will print off the first 10 lines of a file, therefore, if a file has <= 10 lines, it will act as the cat function. different limits can be set with the -n argument
+I will need to convert this argument into a number
+when multiple files are opened, it will seperate files and print them as one output
+Open() function will raise all errors
+
+Sort - sort will print a file were each line is sorted in lexical order.
+when multiple files are given, the lines will be mixed.
+errors will be caught with the open() function
+
+Tac - can take >= 1 files, opens the files and prints them into one output, but in reverse.
+same errors as cat
+
+Tail - This function will print the final 10 lines of a file, uses the -n argument to set a different limit. 
+multiple files will be seperated and printed in the same output.
+open() will raise all erros
+
+Cut - this function will extract columns from a single file, lines are split into fields on each comma, by defalt the first field is printed but the rest are ignored
+-f can be given as an argument to specify which field to extract by number, by default, cut's field numbers start with a 1 and not a 0
+-f can take multiple arguments to cut multiple fields, seperate with a comma, and print them
+cut can take multiple inputs of files.
+Field numbers greater than teh number of fields present in a file are treated as they are empty, do this to prevent an Index error
+open() will raise exeptions
+
+Paste - paste will join two or more files together with a comma seperating them. paste works by opening a file and using a for loop to iterate through the list of file objects
+reading one line from each file and priting it with a comma and not a new line. After the last file is readm a newline is printe, The for loop will be repeated until all files are 
+exhausted.
+when just one file is given to paste, it acts as cat.
+errors are same as cut.
+
 **Step Five**
 [ ]Data used by functions and where it comes from
 	* Explain what form the output will take? I guess I will know what this means later when I know more about the assignment
