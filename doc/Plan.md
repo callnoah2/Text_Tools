@@ -18,6 +18,24 @@ Deliver:
     *   Explain what form the output will take.
 *   [ ] List the algorithms that will be used (but don't write them yet).
 
+## Phase 0, instructions:
+**Step One**
+[x]Read through all files
+**Step Two**
+[ ]Do it again
+**Step three**
+[ ]Re-write instructions
+**Step four**
+[ ]Explain what each function should do
+	* what input it needs 
+	* what will cause error messages and what the messages will say
+	* any challenges with the function
+	* what I already know how to do
+**Step Five**
+[ ]Data used by functions and where it comes from
+	* Explain what form the output will take? I guess I will know what this means later when I know more about the assignment
+**Step Six**
+[ ] List all algorithms that will be used and where
 
 ## Phase 1: Design
 *(30% of your effort)*
