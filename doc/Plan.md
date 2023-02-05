@@ -7,16 +7,16 @@
 
 Deliver:
 
-*   [ ] Re-write the instructions in your own words.
+*   [x] Re-write the instructions in your own words.
     *   If you don't do this, you won't know what you're supposed to do!
     *   Don't leave out details!
-*   [ ] Explain the problem this program aims to solve.
+*   [x] Explain the problem this program aims to solve.
     *   Describe what a *good* solution looks like.
     *   List what you already know how to do.
     *   Point out any challenges that you can foresee.
-*   [ ] List all of the data that is used by the program, making note of where it comes from.
+*   [x] List all of the data that is used by the program, making note of where it comes from.
     *   Explain what form the output will take.
-*   [ ] List the algorithms that will be used (but don't write them yet).
+*   [x] List the algorithms that will be used (but don't write them yet).
 
 ## Phase 0, instructions:
 **Step One**
@@ -100,10 +100,18 @@ when just one file is given to paste, it acts as cat.
 errors are same as cut.
 
 **Step Five**
-[ ]Data used by functions and where it comes from
-	* Explain what form the output will take? I guess I will know what this means later when I know more about the assignment
+[x]Data used by functions and where it comes from
+	* Explain what form the output will take?
+
+Data all comes from the data files that will be used for testing, really, any text based files can be used as data.
+the output will depend on the function called, but it will always be printed out or > directed into a different file.
+
 **Step Six**
-[ ] List all algorithms that will be used and where
+[x] List all algorithms that will be used and where
+
+I have only seen one function that will require an algorithm and I will just use the sort() from python.
+If there are any other algorithms needed, I will plan them before I continue.
+
 
 ## Phase 1: Design
 *(30% of your effort)*
