@@ -130,6 +130,55 @@ Deliver:
     *   Write a few specific examples that occur to you, and use them later when testing
 
 
+**Functions for each tool:**
+Cat -
+open([file to be opened]) > new file?
+print(new file?)
+
+WC -
+open([file]) > new file?
+len of file? 
+number of lines
+number of characters
+
+grep -
+open([file]) > new file?
+for i in len(file)
+	if i == "grep word"
+		print(grep word)
+	i += 1
+
+head -
+open([file]) > new file?
+for i in range(10 or change)
+	print line
+	i += 1
+
+sort -
+sort(open([file])) > new file?
+print(all of it)
+
+tac -
+cat()
+last = len(file by lines)
+for last to 1
+print line
+last -= 1
+
+tail -
+open([file]) > new file?
+lines = len of file - 10 or number asked for
+for lines in range of len of file
+print line
+lines += 1
+
+cut -
+open([file]) > new file?
+Not sure
+
+paste - 
+Not sure
+
 ## Phase 2: Implementation
 *(15% of your effort)*
 
