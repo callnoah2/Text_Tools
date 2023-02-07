@@ -37,6 +37,26 @@ from Usage import usage
 if len(sys.argv) < 2:  	  	  
     usage()  	  	  
     sys.exit(1)  	  	  
-else:  	  	  
-    print("TODO: determine which tool the user has invoked")  	  	  
-    print("TODO: call on that tool, forwarding any remaining arguments to it")  	  	  
+else:
+    if sys.argv[1] == "cat":
+        cat(fileName)
+    elif sys.argv[1] == "tac":
+        tac(fileName)
+    elif sys.argv[1] == "cut":
+        cut(fileName)
+    elif sys.argv[1] == "paste":
+        paste(fileName)
+    elif sys.argv[1] == "grep":
+        grep(searchkey, fileName)
+    elif sys.argv[1] == "head":
+        head(fileName)
+    elif sys.argv[1] == "tail":
+        tail(fileName)
+    elif sys.argv[1] == "sort":
+        sort(fileName)
+    elif sys.argv[1] == "wc":
+        wc(fileName)
+    else:
+        print("Invalid Tool Selection")
+
+    print(sys.argv)
