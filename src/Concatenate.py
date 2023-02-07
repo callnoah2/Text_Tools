@@ -21,10 +21,9 @@
 #       reasonable and customary use of the source files.  	  	  
 
 
-def cat(args):  	  	  
-    """concatenate files and print on the standard output"""  	  	  
-    print("TODO: concatenate files and print on the standard output")  	  	  
-
+def cat(fileName):  	  	  
+	open(fileName)
+	print(fileName)
 
 def tac(args):  	  	  
     """concatenate and print files in reverse"""  	  	  
