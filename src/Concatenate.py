@@ -18,13 +18,23 @@
 #       notices from the Source form of the Work; and  	  	  
 #   (d) You do not misuse the trade names, trademarks, service marks,  	  	  
 #       or product names of the Licensor, except as required for  	  	  
-#       reasonable and customary use of the source files.  	  	  
+#       reasonable and customary use of the source files.
+
+def cat(fileName):
+    # this is to iterate through all files
+    for i in range(len(fileName)):
+        # this opens one file at a time
+        with open(fileName[i], 'r') as file:
+            # this prints the entire file
+                print(file.read())
+            #iterate i to go to next file
+        i += 1
 
 
-def cat(fileName):  	  	  
-	open(fileName)
-	print(fileName)
-
-def tac(args):  	  	  
-    """concatenate and print files in reverse"""  	  	  
-    print("TODO: concatenate and print files in reverse")  	  	  
+def tac(fileName):
+    for i in range(len(fileName)):
+        with open(fileName[i], 'r') as file:
+            lines = file.readline()
+            lines.reverse()
+            for j in lines:
+                print(j)

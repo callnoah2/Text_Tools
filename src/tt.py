@@ -39,24 +39,22 @@ if len(sys.argv) < 2:
     sys.exit(1)  	  	  
 else:
     if sys.argv[1] == "cat":
-        cat(fileName)
+        cat(sys.argv[2:])
     elif sys.argv[1] == "tac":
-        tac(fileName)
+        tac(sys.argv[2:])
     elif sys.argv[1] == "cut":
-        cut(fileName)
+        cut(sys.argv[2:])
     elif sys.argv[1] == "paste":
-        paste(fileName)
+        paste(sys.argv[2:])
     elif sys.argv[1] == "grep":
-        grep(searchkey, fileName)
+        grep(sys.argv[2], sys.argv[3:])
     elif sys.argv[1] == "head":
-        head(fileName)
+        head(sys.argv[2:])
     elif sys.argv[1] == "tail":
-        tail(fileName)
+        tail(sys.argv[2:])
     elif sys.argv[1] == "sort":
-        sort(fileName)
+        sort(sys.argv[2:])
     elif sys.argv[1] == "wc":
-        wc(fileName)
+        wc(sys.argv[2:])
     else:
         print("Invalid Tool Selection")
-
-    print(sys.argv)
