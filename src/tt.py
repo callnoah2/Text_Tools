@@ -47,7 +47,7 @@ else:
     elif sys.argv[1] == "paste":
         paste(sys.argv[2:])
     elif sys.argv[1] == "grep":
-        grep(sys.argv[2], sys.argv[3:])
+        grep(sys.argv[2:])
     elif sys.argv[1] == "head":
         head(sys.argv[2:])
     elif sys.argv[1] == "tail":
