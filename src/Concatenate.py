@@ -26,7 +26,7 @@ def cat(fileName):
         # this opens one file at a time
         with open(fileName[i], 'r') as file:
             # this prints the entire file
-                print(file.read())
+                print(file.read(), end="")
             #iterate i to go to next file
         i += 1
 
