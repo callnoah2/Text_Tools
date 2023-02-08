@@ -18,7 +18,8 @@ Deliver:
     *   Explain what form the output will take.
 *   [x] List the algorithms that will be used (but don't write them yet).
 
-## Phase 0, instructions:
+
+-My Phase 0, instructions:
 **Step One**
 [x]Read through all files
 **Step Two**
@@ -108,10 +109,10 @@ the output will depend on the function called, but it will always be printed out
 
 **Step Six**
 [x] List all algorithms that will be used and where
-
-I have only seen one function that will require an algorithm and I will just use the sort() from python.
-If there are any other algorithms needed, I will plan them before I continue.
-
+Algorithms will be used to iterate throughe the files given,
+they will be used to print the lines line by line
+they will be used to reverse the lines in cat
+they will be used to search for words
 
 ## Phase 1: Design
 *(30% of your effort)*
@@ -120,43 +121,52 @@ If there are any other algorithms needed, I will plan them before I continue.
 
 Deliver:
 
-*   [ ] Function signatures that include:
+*   [x] Function signatures that include:
     *   Descriptive names.
     *   Parameter lists.
     *   Documentation strings that explain its purpose and types of inputs and outputs.
-*   [ ] Pseudocode that captures how each function works.
+*   [x] Pseudocode that captures how each function works.
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
 *   Explain what happens in the face of good and bad input.
     *   Write a few specific examples that occur to you, and use them later when testing
 
 
+**Algorithm used to iterate through files given**
+for loop range len filesgiven
+	code to be done for each file one at a time
+	iterate loop
+**Algorithm used to iterate 
+
+
 **Functions for each tool:**
 Cat -
-open([file to be opened]) > new file?
+loop to iterate through files -listed above-
+open([file to be opened])
 print(new file?)
 
 WC -
-open([file]) > new file?
+open([file])
 len of file? 
 number of lines
 number of characters
 
 grep -
-open([file]) > new file?
+open([file])
 for i in len(file)
 	if i == "grep word"
 		print(grep word)
 	i += 1
 
 head -
-open([file]) > new file?
+open([file])
 for i in range(10 or change)
 	print line
 	i += 1
 
 sort -
-sort(open([file])) > new file?
-print(all of it)
+for loop to iterate through all files,
+append a list for each file while using sort function 
+print(list)
 
 tac -
 cat()
@@ -166,14 +176,14 @@ print line
 last -= 1
 
 tail -
-open([file]) > new file?
+open([file])
 lines = len of file - 10 or number asked for
 for lines in range of len of file
 print line
 lines += 1
 
 cut -
-open([file]) > new file?
+open([file])
 Not sure
 
 paste - 
