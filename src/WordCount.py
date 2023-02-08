@@ -21,6 +21,23 @@
 #       reasonable and customary use of the source files.  	  	  
 
 
-def wc(files):  	  	  
-    """print newline, word, and byte counts for each file"""  	  	  
-    print("TODO: print newline, word, and byte counts for each file")  	  	  
+def wc(files):
+    # to iterate through each file
+    for i in range(len(files)):
+        # to open then close a file as f
+        with open(files[i], "r") as f:
+            # count the number of lines
+            lines = f.readlines()
+            numLines = len(lines)
+            # initializing word and character count
+            numWords = 0
+            numChar = 0
+            # loop to iterate though all lines
+            for j in lines:
+                # counting individual words and characters
+                words = j.split()
+                numWords += len(words)
+                numChar += len(j)
+                # print final data
+            print(numLines, numWords, numChar, files[i])
+
