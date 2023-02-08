@@ -21,6 +21,21 @@
 #       reasonable and customary use of the source files.  	  	  
 
 
-def grep(args):  	  	  
-    """print lines that match patterns"""  	  	  
-    print("TODO: print lines that match patterns")  	  	  
+def grep(files):
+    if files[0] in ["-v", "-V"]:
+        key = files[1]
+        del files[0:2]
+        for i in range(len(files)):
+            with open(files[i], "r") as f:
+                lines = f.readlines()
+                for j in lines:
+                    if key not in j:
+                        print(j, end="")
+    else:
+        key = files.pop(0)
+        for i in range(len(files)):
+            with open(files[i], "r") as f:
+                lines = f.readlines()
+                for j in lines:
+                    if key in j:
+                        print(j, end="")
