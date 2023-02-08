@@ -21,9 +21,15 @@
 #       reasonable and customary use of the source files.  	  	  
 
 
-def head(args):  	  	  
-    """output the first part of files"""  	  	  
-    print("TODO: output the first part of files")  	  	  
+def head(files, n=10):
+    if files[0] in ["-n", "-N"]:
+        n = int(files[1])
+    del files[0:2]
+    for i in range(len(files)):
+        with open(files[i], "r") as f:
+            lines = f.readlines()
+            for j in lines[:n]:
+                print(j, end="")
 
 
 def tail(args):  	  	  
