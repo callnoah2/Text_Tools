@@ -22,19 +22,21 @@
 
 def cat(fileName):
     # this is to iterate through all files
-    for i in range(len(fileName)):
+    for i in fileName:
         # this opens one file at a time
-        with open(fileName[i], 'r') as file:
+        with open(i, 'r') as file:
             # this prints the entire file
                 print(file.read(), end="")
-            #iterate i to go to next file
-        i += 1
 
 
 def tac(fileName):
-    for i in range(len(fileName)):
-        with open(fileName[i], 'r') as file:
-            lines = file.readline()
-            lines.reverse()
-            for j in lines:
-                print(j)
+    #iterate trough each file
+    for i in fileName:
+        with open(i, "r") as f:
+            #seperate each line
+            line = f.readlines()
+            #reverse lines
+            line.reverse()
+            #print contents line by line
+            for j in line:
+                print(j, end="")
