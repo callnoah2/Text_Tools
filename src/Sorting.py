@@ -1,4 +1,5 @@
-#                         ,  	  	  
+from Concatenate import cat
+#                         ,
 #                        (o)<  DuckieCorp Software License  	  	  
 #                   .____//  	  	  
 #                    \ <' )   Copyright (c) 2023 Erik Falor  	  	  
@@ -21,6 +22,23 @@
 #       reasonable and customary use of the source files.  	  	  
 
 
-def sort(args):  	  	  
-    """sort lines of text files"""  	  	  
-    print("TODO: sort lines of text files")  	  	  
+def sort(files):
+    # print(files)
+    # finalList = []
+    # for i in range(len(files)):
+    #         with open(files[i], "r") as f:
+    #             lines = f.readlines()
+    #             lines.sort()
+    #             for j in lines:
+    #                 finalList.append(j)
+    #     sort(finalList)
+    #         for k in range(len(finalList)):
+    #         print(finalList, end="")
+    finalLst = []
+    print(files)
+    for i in range(len(files)):
+        with open(files[i], "r") as f:
+            finalLst.append(f.readlines())
+    sort(finalLst)
+    print(finalLst)
+
