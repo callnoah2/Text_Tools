@@ -1,4 +1,3 @@
-from Concatenate import cat
 #                         ,
 #                        (o)<  DuckieCorp Software License  	  	  
 #                   .____//  	  	  
@@ -23,27 +22,16 @@ from Concatenate import cat
 
 
 def sort(fileName):
-    # for i in range(len(files)):
-    #         with open(files[i], "r") as f:
-    #             lines = f.readlines()
-    #             lines.sort()
-    #             for j in lines:
-    #                 finalList.append(j)
-    #     sort(finalList)
-    #         for k in range(len(finalList)):
-    #         print(finalList, end="")
-
-    # finalLst = []
-    # for i in range(len(fileName[0])):
-    #     with open(fileName[i], "r") as f:
-    #         finalLst.append(f.readlines())
-    # sort(finalLst)
-    # print(finalLst)
+    #create an empty list to print add contents of files into
     lst = []
+    #iterates through all files
     for i in fileName:
         with open(i, "r") as f:
+            # adds the contents of each file into the list
             lst.extend(f.readlines())
+    # sorts the final list
     lst.sort()
+    # iterates though each line and prints it
     for j in lst:
         print(j, end="")
 
