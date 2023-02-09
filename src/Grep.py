@@ -27,9 +27,9 @@ def grep(files):
         key = files[1]
         del files[0:2]
     #iterate through all files
-        for i in range(len(files)):
+        for i in files:
             #open each file
-            with open(files[i], "r") as f:
+            with open(i, "r") as f:
                 lines = f.readlines()
                 for j in lines:
                     #if key not in line, print line
@@ -39,9 +39,9 @@ def grep(files):
         # key is the first "file" they put
         key = files.pop(0)
         #iterate through all files
-        for i in range(len(files)):
+        for i in files:
             #open each file
-            with open(files[i], "r") as f:
+            with open(i, "r") as f:
                 lines = f.readlines()
                 for j in lines:
                     # if key in line print line
