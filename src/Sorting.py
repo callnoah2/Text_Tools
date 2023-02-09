@@ -22,9 +22,7 @@ from Concatenate import cat
 #       reasonable and customary use of the source files.  	  	  
 
 
-def sort(files):
-    # print(files)
-    # finalList = []
+def sort(fileName):
     # for i in range(len(files)):
     #         with open(files[i], "r") as f:
     #             lines = f.readlines()
@@ -34,11 +32,18 @@ def sort(files):
     #     sort(finalList)
     #         for k in range(len(finalList)):
     #         print(finalList, end="")
-    finalLst = []
-    print(files)
-    for i in range(len(files)):
-        with open(files[i], "r") as f:
-            finalLst.append(f.readlines())
-    sort(finalLst)
-    print(finalLst)
+
+    # finalLst = []
+    # for i in range(len(fileName[0])):
+    #     with open(fileName[i], "r") as f:
+    #         finalLst.append(f.readlines())
+    # sort(finalLst)
+    # print(finalLst)
+    lst = []
+    for i in fileName:
+        with open(i, "r") as f:
+            lst.extend(f.readlines())
+    lst.sort()
+    for j in lst:
+        print(j, end="")
 
