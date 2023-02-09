@@ -131,56 +131,81 @@ Deliver:
     *   Write a few specific examples that occur to you, and use them later when testing
 
 
+each file will accept user input from word 2 - end,
+if file accepts an argument,
+function will check to see if argument is present and adjusts function accordigly
+argument is then removed from input to keep input as a file only
+
 **Algorithm used to iterate through files given**
 for loop range len filesgiven
 	code to be done for each file one at a time
 	iterate loop
-**Algorithm used to iterate 
-
 
 **Functions for each tool:**
 Cat -
 loop to iterate through files -listed above-
-open([file to be opened])
-print(new file?)
+open file
+print line by line
 
 WC -
-open([file])
-len of file? 
-number of lines
-number of characters
+initalize counts for totals
+iterate through each file
+open each file
+split each file by line
+lines = len(split lines)
+loop to search through each line
+split each line into words
+numWords = len(words)
+split words into characters
+numChar = len(splitWords)
+print numOfLines, numWords, numChar, fileItCameFrom
+if more than one file,
+print totals
 
 grep -
-open([file])
-for i in len(file)
-	if i == "grep word"
-		print(grep word)
-	i += 1
+if input == -v, print all lines that dont contain key word
+iterate through each file,
+open each file,
+split by lines
+if key not in line, print line
+
+if input != -v, print all lines that contain key
+iterate through each file
+open each file,
+split into inividual lines
+if key in line, print line
 
 head -
-open([file])
-for i in range(10 or change)
-	print line
-	i += 1
+check if input is -n,
+if it is, change number of lines to be printed
+iterate through each file
+open each file
+split into lines
+print the first n lines
 
 sort -
-for loop to iterate through all files,
-append a list for each file while using sort function 
-print(list)
+final= []
+iterate thorugh each file
+open file
+split by lines and append each line to final list
+sort final list after done iterating through files
+print each line in list
 
 tac -
-cat()
-last = len(file by lines)
-for last to 1
-print line
-last -= 1
+iterate through each file
+open file
+seperate by line into a list
+reverse list
+print list line by line
 
 tail -
-open([file])
-lines = len of file - 10 or number asked for
-for lines in range of len of file
-print line
-lines += 1
+check if -n argument is used
+if it is, change n
+else: n =10
+iterate through each file
+open file
+split by lines
+print last 10 of those lines
 
 cut -
 open([file])
