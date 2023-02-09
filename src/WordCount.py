@@ -23,9 +23,9 @@
 
 def wc(files):
     # to iterate through each file
-    for i in range(len(files)):
+    for i in files:
         # to open then close a file as f
-        with open(files[i], "r") as f:
+        with open(i, "r") as f:
             # count the number of lines
             lines = f.readlines()
             numLines = len(lines)
@@ -39,5 +39,5 @@ def wc(files):
                 numWords += len(words)
                 numChar += len(j)
                 # print final data
-            print(numLines, numWords, numChar, files[i])
+            print(numLines, numWords, numChar, i)
 
