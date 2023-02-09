@@ -36,6 +36,24 @@ def head(files, n=10):
                 print(j, end="")
 
 
-def tail(args):  	  	  
-    """output the last part of files"""  	  	  
-    print("TODO: output the last part of files")  	  	  
+def tail(files, n=10):
+    # list to be printed at end
+    final =[]
+    # checks to see if user uses -n argument to change the number of lines
+    if files[0] in ["-n", "-N"]:
+        n = int(files[1])
+        del files[0:2]
+    # opens each file
+    for i in files:
+        with open(i, "r") as f:
+            lines = f.readlines()
+            #reverses so last n lines are on top
+            lines.reverse()
+            for j in range(n):
+                #puts last n lines into the final list
+                final.append(lines[j])
+            #list reverses back to be printed correctly
+            final.reverse()
+            #prints each line in the list
+            for line in final:
+                print(line, end="")
