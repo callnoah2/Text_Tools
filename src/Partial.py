@@ -27,9 +27,9 @@ def head(files, n=10):
         n = int(files[1])
         del files[0:2]
     #iterates through all files
-    for i in range(len(files)):
+    for i in files:
         #opens each file
-        with open(files[i], "r") as f:
+        with open(i, "r") as f:
             lines = f.readlines()
             #for the first n files, print them
             for j in lines[:n]:
