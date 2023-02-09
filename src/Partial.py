@@ -22,12 +22,16 @@
 
 
 def head(files, n=10):
+    #checks to see if user uses -n argument to change the number of lines
     if files[0] in ["-n", "-N"]:
         n = int(files[1])
-    del files[0:2]
+        del files[0:2]
+    #iterates through all files
     for i in range(len(files)):
+        #opens each file
         with open(files[i], "r") as f:
             lines = f.readlines()
+            #for the first n files, print them
             for j in lines[:n]:
                 print(j, end="")
 
