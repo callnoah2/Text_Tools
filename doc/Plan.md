@@ -293,10 +293,13 @@ while implementing.
 
 Deliver:
 
-*   [ ] A set of test cases that you have personally run on your computer.
+*   [x] A set of test cases that you have personally run on your computer.
     *   Include a description of what happened for each test case.
     *   For any bugs discovered, describe their cause and remedy.
     *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
+
+-- ALL TESTS WERE DONE IN THE COMMAND LINE, NOT PYCHARM --
+ - tests show the input and what the input is in plain language -
 
 $ python3 src/tt.py cat - ran cat without any files
 This was supposed to raise an error that there weren't enough files given.
@@ -321,6 +324,9 @@ all tools work as they should with the proper output, I know this because they m
 
 All tools except for Cut that is. Cut will work properly without any arguments, cut also works properly with a single argument
 but if trying to cut multiple columns, it raises an error because 2,3 isn't a number.
+
+
+
 
 ## Phase 4: Deployment
 *(5% of your effort)*
