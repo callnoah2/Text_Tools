@@ -333,17 +333,20 @@ but if trying to cut multiple columns, it raises an error because 2,3 isn't a nu
 
 Deliver:
 
-*   [ ] Your repository is pushed to GitLab.
-*   [ ] **Verify** that your final commit was received by browsing to its project page on GitLab.
+*   [x] Your repository is pushed to GitLab.
+*   [x] **Verify** that your final commit was received by browsing to its project page on GitLab.
     *   Ensure the project's URL is correct.
     *   Review the project to ensure that all required files are present and in correct locations.
     *   Check that unwanted files have not been included.
     *   Make any final touches to documentation, including the Sprint Signature and this Plan.
-*   [ ] **Validate** that your submission is complete and correct by cloning it to a new location on your computer and re-running it.
+*   [x] **Validate** that your submission is complete and correct by cloning it to a new location on your computer and re-running it.
 	*	Run your program from the command line so you can see how it will behave when your grader runs it.  **Running it in PyCharm is not good enough!**
     *   Run through your test cases to avoid nasty surprises.
     *   Check that your documentation files are all present.
 
+
+I did this by cloning it to my other computer and doing the testing on that. Then I got on my usual computer, pulled the repository and finished it that way
+I ran all tests through the command line, I prefer it that way.
 
 ## Phase 5: Maintenance
 
@@ -365,3 +368,22 @@ Deliver:
         *   ...to the next version of Python?
 *   [ ] Make one final commit and push your **completed** Software Development Plan to GitLab.
 *   [ ] Respond to the **Assignment Reflection Survey** on Canvas.
+
+
+I have one chunk of code in the grep function that is a bit sloppy and could have been written better. It is the algorithm to put the correct number of
+spaces for each column when the grep function is printing.
+I understand all parts of the program except for getting cut to print more than one column, I know I need to split it by using the split funciton and using
+a comma as the peramiter, but I don't know what to do next, because if I do a loop, then it will just print it at the bottom.
+
+If a bug was reported in the next few months, I could find it pretty quickly, All my functions are seperated well and have comments around them so I can 
+look at it in the future and see what I was thinking.
+
+My plan/documentation is a bit sloppy and all over the place, in the next project I am going to take more time to format it and make it look good.
+I think that it is well written and reflects what the program does, but it is disorganized, looking over it again in 6 months, it would still make
+sense but it might be hard to follow.
+
+Adding a new feature in a year would be easy, I would need to plan what the feature is then I can add it to the tt.py and usage then create its own folder.
+and it would work just the same as the other functions
+
+My program should keep working after upgrades, though to be fair, I am not sure how upgrades would affect the program. But I think the funcitons I used will still
+be used in the future.
