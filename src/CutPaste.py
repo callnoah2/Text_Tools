@@ -26,6 +26,22 @@ def cut(args):
     print("TODO: remove sections from each line of files")  	  	  
 
 
-def paste(args):  	  	  
-    """merge lines of files"""  	  	  
-    print("TODO: merge lines of files")  	  	  
+def paste(files):
+    contents = []
+    for i in files:
+        with open(i, "r") as f:
+            contents.append(f.readlines())
+
+    maxLen = max(len(l) for l in contents)
+
+    for i in range(maxLen):
+        lines = []
+        for j in contents:
+            if i > len(j):
+                line = ""
+            else:
+                line = j[i].strip("\n")
+            lines.append(line)
+        for n in range(len(lines)):
+            print(lines[n]+",", end="")
+        print("")
