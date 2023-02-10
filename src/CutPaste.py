@@ -23,37 +23,50 @@
 def cut(fileName, v=0):
     #checks if argument is used
     if fileName[0] in ["-f", "-F"]:
+
         v = int(fileName[1]) - 1
         del fileName[0:2]
     # opens file
     for i in fileName:
         with open(i, "r") as fle:
+            #splits by lines
             lines = fle.readlines()
             header = lines[v].split(",")
-            tbd = [header[v]]
+            # determines what col to print
+            col = [header[v]]
+            #spits all lines by comma
             for j in lines[0:]:
                 row = j.split(",")
-                for k in range(len(tbd)):
+                #prints all rows at the correct col
+                for k in range(len(col)):
                    print(row[v])
 
 
 
 def paste(files):
+    #empty string to add all files to
     contents = []
+    #opens each file
     for i in files:
         with open(i, "r") as f:
+            #splits files into seperate lines and adds them to list
             contents.append(f.readlines())
-
+    #determines what the longest file is
     maxLen = max(len(l) for l in contents)
 
+    #for the length of the longest file:
     for i in range(maxLen):
         lines = []
+        #for each line in contents
         for j in contents:
+            # checks to see if file is still going, if not, prints empty string
             if i > len(j):
                 line = ""
             else:
+            #if string is not empty, print the line without "\n"
                 line = j[i].strip("\n")
             lines.append(line)
         for n in range(len(lines)):
             print(lines[n]+",", end="")
+        #prints newline
         print("")
