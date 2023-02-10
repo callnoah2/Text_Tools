@@ -38,6 +38,43 @@ def wc(files):
                 words = j.split()
                 numWords += len(words)
                 numChar += len(j)
-                # print final data
-            print(numLines, numWords, numChar, i)
+
+            # print final data
+
+            # Look, I know there was probably a better way to space this,
+            #but it took me 30 seconds to write this, another 30 senconds
+            #to copy and paste it to work with the other counts.
+            #I didn't even know what to look up to find the efficent way to do this
+            #so it would have taken much longer.
+
+            #spacing correctly for lines
+            if numLines >= 1000:
+                lineSpace = " "
+            elif numLines >= 100:
+                lineSpace = "  "
+            elif numLines >= 10:
+                lineSpace = "   "
+            else:
+                lineSpace = "    "
+
+            #spacing correctly for Words
+            if numWords >= 1000:
+                wordSpace = " "
+            elif numWords >= 100:
+                wordSpace = "  "
+            elif numWords >= 10:
+                wordSpace = "   "
+            else:
+                wordSpace = "    "
+
+            #spacing correctly for Char
+            if numChar >= 1000:
+                charSpace = " "
+            elif numChar >= 100:
+                charSpace = "  "
+            elif numChar >= 10:
+                charSpace = "   "
+            else:
+                charSpace = "    "
+            print(numLines, lineSpace, numWords, wordSpace, numChar, charSpace, i)
 
