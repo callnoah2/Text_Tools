@@ -208,11 +208,53 @@ split by lines
 print last 10 of those lines
 
 cut -
-open([file])
-Not sure
+check if -f arguent is used,
+if it is, adjust accordingly
+delete argument and its data from file list
+open file
+seperate by line
+sperate by comma
+print f element of file
 
-paste - 
-Not sure
+paste -
+one idea I had of how to do this is with a while loop
+where the loop will end when all files print an empty string
+I will still need to figure out a way to check if all files printed empty strings.
+
+still going = True
+current line = 0
+
+while still going:
+if all files print "": still going = False
+for i in files:
+open i
+split by lines
+if cuurent line > len(lines)
+print("")
+else: print (line[current line], end="")
+print( ",", end="")
+
+another way I have thought about doing this is by opening each file and comparing their lengths and
+using the longest file as the loops contingancy
+
+contents = []
+
+for each file in filenames
+open the file
+append each line to contents
+
+use max() to find the longest length of the file
+
+for i in range max length
+lines = []
+for j in contents
+if i > len j  (meaning if the file has run out of lines to print)
+line = ""
+else:
+line = contents[i]
+append line to lines list
+print(line, end="")
+print(", ")
 
 ## Phase 2: Implementation
 *(15% of your effort)*
@@ -224,6 +266,11 @@ Deliver:
 *   [ ] More or less working code.
 *   [ ] Note any relevant and interesting events that happened while you wrote the code.
     *   e.g. things you learned, things that didn't go according to plan
+
+implementing my sudo code went well for all funtions but paste and cut
+my sudo code was missing important things in both of those functions that I had to figure out
+while implementing.
+
 
 
 ## Phase 3: Testing and Debugging
