@@ -20,26 +20,28 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.
 
-def cut(fileName, v=0):
+def cut(fileName, n=0):
     #checks if argument is used
     if fileName[0] in ["-f", "-F"]:
-
-        v = int(fileName[1]) - 1
+        n = int(fileName[1]) - 1
+        oracleN = fileName.split(",")
         del fileName[0:2]
     # opens file
     for i in fileName:
         with open(i, "r") as fle:
             #splits by lines
             lines = fle.readlines()
-            header = lines[v].split(",")
+            header = lines[n].split(",")
             # determines what col to print
-            col = [header[v]]
+            col = [header[n]]
             #spits all lines by comma
             for j in lines[0:]:
                 row = j.split(",")
                 #prints all rows at the correct col
                 for k in range(len(col)):
-                   print(row[v])
+                   print(row[n])
+
+
 
 
 
