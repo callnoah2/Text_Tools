@@ -114,6 +114,9 @@ they will be used to print the lines line by line
 they will be used to reverse the lines in cat
 they will be used to search for words
 
+
+
+
 ## Phase 1: Design
 *(30% of your effort)*
 
@@ -141,7 +144,10 @@ for loop range len filesgiven
 	code to be done for each file one at a time
 	iterate loop
 
+
 **Functions for each tool:**
+
+
 Cat -
 loop to iterate through files -listed above-
 open file
@@ -256,6 +262,9 @@ append line to lines list
 print(line, end="")
 print(", ")
 
+
+
+
 ## Phase 2: Implementation
 *(15% of your effort)*
 
@@ -270,6 +279,7 @@ Deliver:
 implementing my sudo code went well for all funtions but paste and cut
 my sudo code was missing important things in both of those functions that I had to figure out
 while implementing.
+
 
 
 
