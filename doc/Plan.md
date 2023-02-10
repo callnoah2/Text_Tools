@@ -317,6 +317,11 @@ error messages printed as else: meaning it printed the instructions to all the t
 I put the tool=[tool] as tool=["tool"]
 this fixed the bug.
 
+all tools work as they should with the proper output, I know this because they match the examples.
+
+All tools except for Cut that is. Cut will work properly without any arguments, cut also works properly with a single argument
+but if trying to cut multiple columns, it raises an error because 2,3 isn't a number.
+
 ## Phase 4: Deployment
 *(5% of your effort)*
 
