@@ -9,4 +9,5 @@
 | Febuary 7   | 2.0 hours  | Finished phase 1
 | Febuary 8   | 3.0 hours  | Implemented code
 | Febuary 9   | 3.5 hours  | Implemented code, worked on phase 2 in plan
-| TOTAL       | 13.5 hours | *Your TOTAL should agree with your daily entries*
+| Febuary 10  | 2.0 hours  | Finished coding, updated plan.
+| TOTAL       | 15.5 hours | *Your TOTAL should agree with your daily entries*

@@ -114,6 +114,11 @@ they will be used to print the lines line by line
 they will be used to reverse the lines in cat
 they will be used to search for words
 
+Things I don't know how to do:
+I don't know how to open files,
+I don't know how to split files line by line
+I don't know how to split files seperated by a comma
+I don't know how to run Python through a command line
 
 
 
