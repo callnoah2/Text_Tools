@@ -19,10 +19,14 @@
 #   (d) You do not misuse the trade names, trademarks, service marks,  	  	  
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.
-
+from Usage import usage
 def cut(fileName, n=0):
+    if len(fileName) == 0:
+        usage(error="too few arguments", tool="cut")
     #checks if argument is used
     if fileName[0] in ["-f", "-F"]:
+        if len(fileName) == 1:
+            usage(error="Specify Column to be Cut", tool="cut")
         n = int(fileName[1]) - 1
         oracleN = fileName.split(",")
         del fileName[0:2]
@@ -46,6 +50,8 @@ def cut(fileName, n=0):
 
 
 def paste(files):
+    if len(files) == 0:
+        usage(error="too few arguments", tool="paste")
     #empty string to add all files to
     contents = []
     #opens each file

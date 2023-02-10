@@ -20,8 +20,10 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.  	  	  
 
-
+from Usage import usage
 def grep(files):
+    if len(files) >= 1:
+        usage(error="too few arguments, Please provide a pattern and at least one filename", tool="grep")
     #see if user is using the -v argument
     if files[0] in ["-v", "-V"]:
         key = files[1]

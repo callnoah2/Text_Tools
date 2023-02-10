@@ -20,7 +20,10 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.
 
+from Usage import usage
 def cat(fileName):
+    if len(fileName) == 0:
+        usage(error="too few arguments", tool="cat")
     # this is to iterate through all files
     for i in fileName:
         # this opens one file at a time
@@ -30,6 +33,8 @@ def cat(fileName):
 
 
 def tac(fileName):
+    if len(fileName) == 0:
+        usage(error="too few arguments", tool="tac")
     #iterate trough each file
     for i in fileName:
         with open(i, "r") as f:

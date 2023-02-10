@@ -20,8 +20,10 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.  	  	  
 
-
+from Usage import usage
 def wc(files):
+    if len(files) == 0:
+        usage(error="too few arguments", tool="wc")
     # to iterate through each file
     for i in files:
         # to open then close a file as f

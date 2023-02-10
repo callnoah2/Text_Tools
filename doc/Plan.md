@@ -298,6 +298,24 @@ Deliver:
     *   For any bugs discovered, describe their cause and remedy.
     *   Write your test cases in plain language such that a non-coder could run them and replicate your experience.
 
+$ python3 src/tt.py cat - ran cat without any files
+This was supposed to raise an error that there weren't enough files given.
+instead, nothing happened.
+
+$ python3 src/tt.py cat Does_not_EXISt - gave cat a file that doesn't exist
+This gave me an error that the file did not exist. this was expected.
+
+$ python3 src/tt.py grep - ran grep without a key or files
+flags error as it should
+but,
+$ python3 src/tt.py grep key - ran grep without files
+did not bring up any errors.
+likewise - any files that can accept arguments did not give the correct error message.
+this includes cut, head, tail.
+
+error messages printed as else: meaning it printed the instructions to all the tools
+I put the tool=[tool] as tool=["tool"]
+this fixed the bug.
 
 ## Phase 4: Deployment
 *(5% of your effort)*

@@ -20,8 +20,10 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.  	  	  
 
-
+from Usage import usage
 def sort(fileName):
+    if len(fileName) == 0:
+        usage(error="too few arguments", tool="sort")
     #create an empty list to print add contents of files into
     lst = []
     #iterates through all files

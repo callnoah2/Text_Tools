@@ -20,10 +20,14 @@
 #       or product names of the Licensor, except as required for  	  	  
 #       reasonable and customary use of the source files.  	  	  
 
-
+from Usage import usage
 def head(files, n=10):
+    if len(files) == 0:
+        usage(error="too few arguments", tool="head")
     #checks to see if user uses -n argument to change the number of lines
     if files[0] in ["-n", "-N"]:
+        if len(files) == 1:
+            usage(error="Specify Number of lines.", tool="head")
         n = int(files[1])
         del files[0:2]
     #iterates through all files
@@ -37,10 +41,14 @@ def head(files, n=10):
 
 
 def tail(files, n=10):
+    if len(files) == 0:
+        usage(error="too few arguments", tool="tail")
     # list to be printed at end
     final =[]
     # checks to see if user uses -n argument to change the number of lines
     if files[0] in ["-n", "-N"]:
+        if len(files) == 1:
+            usage(error="Specify Number of lines.", tool="tail")
         n = int(files[1])
         del files[0:2]
     # opens each file
