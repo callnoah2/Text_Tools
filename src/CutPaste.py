@@ -18,12 +18,24 @@
 #       notices from the Source form of the Work; and  	  	  
 #   (d) You do not misuse the trade names, trademarks, service marks,  	  	  
 #       or product names of the Licensor, except as required for  	  	  
-#       reasonable and customary use of the source files.  	  	  
+#       reasonable and customary use of the source files.
 
+def cut(fileName, v=0):
+    #checks if argument is used
+    if fileName[0] in ["-f", "-F"]:
+        v = int(fileName[1]) - 1
+        del fileName[0:2]
+    # opens file
+    for i in fileName:
+        with open(i, "r") as fle:
+            lines = fle.readlines()
+            header = lines[v].split(",")
+            tbd = [header[v]]
+            for j in lines[0:]:
+                row = j.split(",")
+                for k in range(len(tbd)):
+                   print(row[v])
 
-def cut(args):  	  	  
-    """remove sections from each line of files"""  	  	  
-    print("TODO: remove sections from each line of files")  	  	  
 
 
 def paste(files):

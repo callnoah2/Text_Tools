@@ -263,8 +263,8 @@ print(", ")
 
 Deliver:
 
-*   [ ] More or less working code.
-*   [ ] Note any relevant and interesting events that happened while you wrote the code.
+*   [X] More or less working code.
+*   [X] Note any relevant and interesting events that happened while you wrote the code.
     *   e.g. things you learned, things that didn't go according to plan
 
 implementing my sudo code went well for all funtions but paste and cut
